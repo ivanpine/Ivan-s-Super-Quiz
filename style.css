@@ -1,0 +1,231 @@
+:root {
+    --font-main-poppins: 'Poppins';
+
+    --clr-primary-blue: #0D46E9;
+    --clr-primary-red: #BC4B4B;
+
+    --clr-neutral-white: #FFFFFF;
+    --clr-neutral-light_yellow: #E1C353;
+    --clr-neutral-light_green: #9AEABC;
+    --clr-neutral-light_red: #FF9393;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--clr-primary-blue);
+    font-family: var(--font-main-poppins);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app {
+    background-color: var(--clr-neutral-white);
+    width: 40%;
+    height: 80vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 32px 5px rgba(0,0,0,0.31);
+    -webkit-box-shadow: 0px 10px 32px 5px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 10px 32px 5px rgba(0,0,0,0.31);
+}
+
+.title {
+    color: var(--clr-neutral-white);
+    text-align: center;
+}
+
+.header {
+    background-color: var(--clr-primary-red);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border: 0;
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-neutral-white);
+    text-transform: uppercase;
+    box-shadow: 0px 10px 41px -6px rgba(0,0,0,0.31);
+    -webkit-box-shadow: 0px 10px 41px -6px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 10px 41px -6px rgba(0,0,0,0.31);
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background-color: var(--clr-neutral-white);
+    color: var(--clr-primary-blue);
+    outline: 2px solid var(--clr-primary-blue);
+}
+
+/* Screen 1 - WELCOME */
+
+.screen1-welcome .header {
+    padding: 5rem 2rem;
+    height: 16rem;
+}
+
+.screen1-welcome .header .title {
+    line-height: 3rem;
+    font-size: 3rem;
+    margin: 0 auto;
+    width: 17.5rem;
+}
+
+.screen1-welcome .footer .button {
+    font-size: 2rem;
+    margin-top: 8rem;
+    padding: 0.5rem 2rem;
+}
+
+/* Screen 2 - QUESTIONS */
+
+.screen2-questions {
+    display: none;
+}
+
+.screen2-questions .title {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.screen2-questions .main {
+    padding: 1rem 2.5rem 0 2.5rem;
+}
+
+#question {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #000;
+    margin-bottom: 1.25rem;
+    padding-bottom: .5rem;
+    text-align: center;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-size: 1.35rem;
+}
+
+.btn-answer {
+    text-align: left;
+    border: 2px solid var(--clr-primary-blue);
+    cursor: pointer;
+    border-radius: .5rem;
+    background: none;
+    padding: .5rem 0 .5rem 1.5rem;
+}
+
+.btn-answer:hover:not([disabled]) {
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-neutral-white);
+}
+
+.btn-answer:disabled {
+    cursor: auto;
+}
+
+.btn-next {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem 4rem;
+}
+
+/* Screen 3 - SCORE */
+
+.screen3-score {
+    display: none;
+}
+
+.screen3-score .header {
+    padding: 0rem 0rem 1rem 0;
+    height: 16rem;
+}
+
+.screen3-score .header .title {
+    font-size: 3rem;
+    width: 17.5rem;
+    margin: 0 auto;
+    line-height: 3rem;
+    padding: 5rem 0 0 0;
+    margin-bottom: 1.5rem;
+}
+
+#result {
+    text-align: center;
+    color: var(--clr-neutral-white);
+    background-color: var(--clr-neutral-light_yellow);
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.btn-again {
+    font-size: 2rem;
+    margin-top: 8rem;
+    padding: 0.5rem 2rem;
+}
+
+.correct {
+    background-color: var(--clr-neutral-light_green);
+}
+
+.incorrect {
+    background-color: var(--clr-neutral-light_red);
+}
+
+@media (max-width: 400px) {
+    .app {
+        width: 90%;
+        height: 80vh;
+    }
+
+    .screen1-welcome .header .title {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .screen2-questions .title {
+        font-size: 1.5rem;
+        padding: 0.75rem 0;
+    }
+
+    .btn-answer {
+        font-size: 1rem;
+    }
+
+    #result {
+        width: 70%;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .app {
+        width: 30%;
+        height: 55vh;
+    }
+}
