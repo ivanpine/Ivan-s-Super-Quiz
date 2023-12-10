@@ -1,5 +1,5 @@
 :root {
-    --font-main-poppins: 'Poppins';
+    --font-main-poppins: 'Poppins', 'sans-serif';
 
     --clr-primary-blue: #0D46E9;
     --clr-primary-red: #BC4B4B;
